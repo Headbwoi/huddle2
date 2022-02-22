@@ -1,0 +1,102 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+@import url("https://fonts.google.com/specimen/Open+Sans");
+
+//resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+//general styles
+body {
+  text-align: center;
+  line-height: 1.3;
+
+  p {
+    color: $Very_Dark_Cyan;
+  }
+}
+a,
+a:visited,
+a:hover {
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.heading,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: 1.5;
+}
+.cta {
+  font-family: "Open Sans";
+  font-weight: 400, 700;
+}
+h3 {
+  font-size: 2rem;
+  @include breakpoints-up(large) {
+    font-size: 3rem;
+  }
+}
+.btn {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 1.3rem 4rem;
+  border-radius: 3.2rem;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.main-btn {
+  @extend .btn;
+  color: $Very_Pale_Cyan;
+  background: $Pink;
+}
+.head-btn {
+  @extend .btn;
+  background-color: #fff;
+  color: $Very_Dark_Cyan;
+  padding: 0.8rem 3rem;
+  border-radius: 2rem;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.box-btn {
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+//utility classes
+
+.container {
+  padding: 2.5rem 2rem;
+  @include breakpoints-up(large) {
+    padding: 5rem 4rem;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &__jc-sb {
+    justify-content: space-between;
+  }
+  &__jc-c {
+    justify-content: center;
+  }
+  &__ai-c {
+    align-items: center;
+  }
+}

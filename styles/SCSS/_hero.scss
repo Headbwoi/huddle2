@@ -1,0 +1,66 @@
+.hero {
+  background: $Very_Pale_Cyan url("/images/bg-hero-desktop.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  nav {
+    img {
+      width: 35%;
+      @include breakpoints-up(large) {
+        width: 15%;
+      }
+      
+    }
+
+    .head-btn{
+      @include breakpoints-up(large) {
+        font-size: 1.5rem;
+        padding: 1rem 5rem;
+      }
+    }
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 10rem 10% 2rem;
+    .heading {
+      font-size: 2.3rem;
+      padding-bottom: 3rem;
+      @include breakpoints-up(large){
+        font-size: 3rem;
+      }
+      @include breakpoints-up(medium) {
+        font-size: 4rem;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      padding-bottom: 4rem;
+      @include breakpoints-up(medium) {
+        font-size: 2rem;
+      }
+    }
+    .hero-image {
+      img {
+        display: block;
+        width: 100%;
+        margin-top: 6rem;
+        @include breakpoints-up(medium) {
+          width: 90%;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  @include breakpoints-up(large) {
+    .hero-content {
+      flex-direction: row;
+      gap: 10rem;
+      padding: 5rem 2%;
+      text-align: left;
+      .heading {
+        font-size: 4rem;
+      }
+    }
+  }
+}
